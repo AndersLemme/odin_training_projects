@@ -32,3 +32,12 @@ div.appendChild(p);
 
 container.appendChild(div);
 
+//button 2
+const btn2 = document.querySelector("#btn2");
+btn2.onclick = () => alert("Hello World2");
+
+//button 3
+const btn3 = document.querySelector("#btn3");
+btn3.addEventListener("click", () => {
+	alert("Hello World3");
+});
