@@ -19,3 +19,16 @@ container.appendChild(content);
 container.appendChild(red);
 container.appendChild(blue);
 
+const div = document.createElement("div");
+div.style.cssText = "background: pink; border: 2px solid black;";
+
+const h1 = document.createElement("h1");
+h1.textContent = "I'm a div";
+div.appendChild(h1);
+
+const p = document.createElement("p");
+p.textContent = "ME TOO!";
+div.appendChild(p);
+
+container.appendChild(div);
+
