@@ -41,3 +41,18 @@ const btn3 = document.querySelector("#btn3");
 btn3.addEventListener("click", () => {
 	alert("Hello World3");
 });
+
+//button 4
+function alertFunction() {
+	alert("Alert with Function!! :)");
+}
+
+const btn4 = document.querySelector("#btn4");
+btn4.addEventListener("click", alertFunction);
+
+//button 5
+const btn5 = document.querySelector("#btn5");
+btn5.addEventListener("click", function (e) {
+	e.target.style.cssText = "background: blue";
+	console.log(e.target);
+});
