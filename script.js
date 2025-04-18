@@ -56,3 +56,12 @@ btn5.addEventListener("click", function (e) {
 	e.target.style.cssText = "background: blue";
 	console.log(e.target);
 });
+
+//group nodes buttons
+const buttons = document.querySelectorAll("button");
+buttons.forEach((button) => {
+	button.addEventListener("click", () =>{
+		alert(button.id);
+	});
+});
+
