@@ -4,6 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple DOM example</title>
+	<style>
+		.highlight {
+			color: white;
+			background-color: black;
+			padding: 10px;
+			width: 250px;
+			text-align: center;
+		}
+	</style>
   </head>
   <body>
       <section>
@@ -14,6 +23,8 @@
 		const link = document.querySelector("a");
 		link.textContent = "Mozilla Developer Network";
 		link.href = "https://developer.mozilla.org";
+		
+		//Creating and placing new nodes
 		const section = document.querySelector("section");
 		const para = document.createElement("p");
 		para.textContent = "Hope you enjoyed the ride :)";
@@ -23,6 +34,14 @@
 			);
 		const linkPara = document.querySelector("p");
 		linkPara.appendChild(text);
+		
+		//Moving and removing elements
+		section.appendChild(linkPara);
+		//section.removeChild(linkPara);
+		linkPara.remove();
+
+		//Manipulating styles
+		para.setAttribute("class", "highlight");
 	</script>
   </body>
 </html>
