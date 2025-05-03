@@ -24,19 +24,33 @@
       <label for="item">Enter a new item:</label>
       <input type="text" name="item" id="item">
       <button>Add item</button>
+
     </div>
 
     <ul>
-
     </ul>
+    <!--
+    <li></li>
+    <span></span>
+    <button></button>
+    -->
 
     <script>
 	const ul = document.querySelector("ul");
 	const input = document.querySelector("input");
 	const button = document.querySelector("button");
 
+  const li = document.createElement("li");
+  const span = document.createElement("span");
+  const del = document.createElement("button");
+
+
 	button.onclick = function(){
 		console.log("button was clicked");
+    var x = input.value;
+    console.log(x);
+    input.value = "";
+
 	};
     </script>
   </body>
