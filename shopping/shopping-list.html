@@ -29,29 +29,46 @@
 
     <ul>
     </ul>
-    <!--
-    <li></li>
-    <span></span>
-    <button></button>
-    -->
 
     <script>
 	const ul = document.querySelector("ul");
 	const input = document.querySelector("input");
 	const button = document.querySelector("button");
 
-  const li = document.createElement("li");
-  const span = document.createElement("span");
-  const del = document.createElement("button");
+  
 
 
 	button.onclick = function(){
 		console.log("button was clicked");
     var x = input.value;
+    if(x==="") return;
+
+    const li = document.createElement("li");
+    const span = document.createElement("span");
+    const del = document.createElement("button");
+    span.textContent= x;
+    li.appendChild(span);
+    li.appendChild(del);
+    del.textContent= "Delete";
+
+    ul.appendChild(li);
     console.log(x);
     input.value = "";
 
+    del.onclick = function(){
+      del.parentElement.remove();
+    }
+    input.focus(); //puts cursor back into input box
+
+    //adding button.onclick function to pressing enter when iside the  input field.
+    input.addEventListener("keydown", function(event){
+      if(event.key === "Enter"){
+        button.onclick();
+      }
+    });
 	};
+
+  
     </script>
   </body>
 </html>
